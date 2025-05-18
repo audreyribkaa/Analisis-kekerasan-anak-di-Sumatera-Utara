@@ -1,10 +1,10 @@
 import gdown
 
-file_id = "1FQb1MlER1s1sImeZgTmMVD8hqVkkTk4m"
-url = f"https://drive.google.com/uc?id={file_id}"
-output = "nama_file_yang_ingin_disimpan"
+# file_id = "1FQb1MlER1s1sImeZgTmMVD8hqVkkTk4m"
+# url = f"https://drive.google.com/uc?id={file_id}"
+# output = "nama_file_yang_ingin_disimpan"
 
-gdown.download(url, output, quiet=False)
+# gdown.download(url, output, quiet=False)
 
 
 # Install Library
@@ -30,7 +30,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 # Connect to Google Drive
 
-!gdown --id 1FQb1MlER1s1sImeZgTmMVD8hqVkkTk4m
+# !gdown --id 1FQb1MlER1s1sImeZgTmMVD8hqVkkTk4m
 
 data = pd.read_excel('dataset siga.xlsx')
 
