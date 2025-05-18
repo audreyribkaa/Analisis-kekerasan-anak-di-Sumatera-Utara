@@ -88,40 +88,6 @@ plt.title('Korelasi Pearson Heatmap', pad=20, fontsize=25)
 plt.savefig('korelasi.png')
 plt.show()
 
->>
-**1. Korelasi Positif yang Kuat**
-
-Beberapa variabel menunjukkan korelasi positif yang sangat tinggi (mendekati 1), yang artinya keduanya cenderung meningkat atau menurun secara bersamaan. Misalnya:
-
-  Kekerasan Seksual ↔ Eksploitasi: Korelasinya sangat tinggi (sekitar 0.88), menunjukkan bahwa kasus eksploitasi sering muncul beriringan dengan kekerasan seksual.
-
-  Kekerasan Lainnya ↔ Penelantaran ↔ Trafficking: Korelasi di atas 0.75, menandakan keterkaitan atau pola terjadinya beberapa jenis kekerasan sekaligus.
-
-  Kelompok Usia 0–5 Tahun ↔ 6–12 Tahun ↔ 13–17 Tahun: Ketiganya memiliki korelasi sangat tinggi satu sama lain (> 0.8), bisa jadi karena data usia anak-anak dan remaja sering diklasifikasikan bersama dalam pelaporan.
-
-
-
-
->>
-**2. Korelasi Negatif atau Lemah**
-
-Sebagian besar variabel memiliki korelasi lemah atau mendekati nol, misalnya antara variabel Tahun dengan jenis kekerasan tertentu, yang artinya tidak ada hubungan linear yang kuat antar tahun dan banyaknya kasus.
-
-Contoh korelasi negatif kecil: Tahun ↔ Lingkungan Masyarakat (-0.33). Ini bisa menunjukkan bahwa jumlah kasus di lingkungan masyarakat sedikit menurun dari tahun ke tahun.
-
->>
-**3. Korelasi antar Sumber Pelaku**
-
-Orang Tua ↔ Keluarga memiliki korelasi kuat (~0.76), yang masuk akal karena pelaku dalam lingkup keluarga dekat bisa saja dicatat dalam kedua kategori.
-
-Sekolah ↔ Petugas Sekolah (Guru dll) juga menunjukkan hubungan yang cukup kuat (~0.6), mendukung asumsi bahwa kasus di sekolah sering melibatkan guru atau staf.
-
->>
-**4. Korelasi antar Jenis Penanganan**
-
-Pengaduan ↔ Kesehatan ↔ Bantuan Hukum menunjukkan korelasi positif yang kuat (> 0.7), menunjukkan bahwa jika ada pengaduan, biasanya juga disertai dengan intervensi hukum dan kesehatan.
-
-Rehabilitasi Sosial ↔ Pemulangan dan Reintegrasi juga saling terkait, karena proses ini biasanya terjadi dalam satu alur penanganan korban.
 
 print('Mengecek keseimbangan data: \n')
 print(data['Jenis Kelamin'].value_counts())
