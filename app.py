@@ -30,7 +30,7 @@ from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_sc
 
 # Connect to Google Drive
 
-!gdown --id 1FQb1MlER1s1sImeZgTmMVD8hqVkkTk4m
+# !gdown --id 1FQb1MlER1s1sImeZgTmMVD8hqVkkTk4m
 
 data = pd.read_excel('dataset siga.xlsx')
 
