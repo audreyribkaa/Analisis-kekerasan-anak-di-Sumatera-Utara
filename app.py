@@ -36,19 +36,21 @@ if data_file is not None:
 
     # Visualisasi Korelasi
     st.subheader("Heatmap Korelasi (Kolom Numerik Saja)")
-    numeric_data = data.select_dtypes(include=['number'])
+    numeric_data = data.apply(pd.to_numeric, errors='coerce')
+    numeric_data = numeric_data.dropna(axis=1, how='all')
+
     if not numeric_data.empty:
         fig, ax = plt.subplots(figsize=(10, 6))
         sns.heatmap(numeric_data.corr(), annot=True, cmap='coolwarm', ax=ax)
         st.pyplot(fig)
     else:
-        st.info("Tidak ada kolom numerik untuk ditampilkan dalam heatmap.")
+        st.info("Tidak ada kolom numerik valid untuk ditampilkan dalam heatmap.")
 
     # Distribusi Data Numerik
     st.subheader("Distribusi Setiap Kolom Numerik")
     for column in numeric_data.columns:
         fig, ax = plt.subplots()
-        sns.histplot(data[column], kde=True, ax=ax)
+        sns.histplot(numeric_data[column].dropna(), kde=True, ax=ax)
         ax.set_title(f"Distribusi: {column}")
         st.pyplot(fig)
 else:
