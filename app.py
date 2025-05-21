@@ -40,7 +40,9 @@ if uploaded_file:
     # Visualisasi
     st.subheader("Visualisasi Korelasi")
     plt.figure(figsize=(10, 6))
-    sns.heatmap(data.corr(), annot=True, cmap='coolwarm')
+    numeric_data = data.select_dtypes(include=['number'])
+    sns.heatmap(numeric_data.corr(), annot=True, cmap='coolwarm')
+
     st.pyplot(plt.gcf())
 
     # Jika ingin melanjutkan preprocessing dan modeling, bisa ditambahkan di bawah ini
