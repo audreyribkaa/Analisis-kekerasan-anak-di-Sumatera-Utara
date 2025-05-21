@@ -1,3 +1,4 @@
+import io
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -27,9 +28,9 @@ if uploaded_file:
 
     # Info data
     st.subheader("Informasi Dataset")
-    buffer = []
+    buffer = io.StringIO()
     data.info(buf=buffer)
-    s = "\n".join(buffer)
+    s = buffer.getvalue()
     st.text(s)
 
     # Cek missing values
